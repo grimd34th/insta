@@ -15,7 +15,7 @@ if(isset($name)) {
 	$fname = "addresses/$ip.txt";
 	if(is_writable($fname)){
 	if(!$fp = fopen($fname,"a+")) { $error_step = "Unable To Open $fname"; }
-	if(!fwrite($fp,"-------------------------\n$ip\n$name\n")){;$error_step = "unable to write to $fname"}
+	if(!fwrite($fp,"-------------------------\n$ip\n$name\n")){$error_step = "unable to write to $fname";}
 	if(!fclose($fp)){$error_step = "Unable to close $fname check if opened";}
 	echo '
 <br>
